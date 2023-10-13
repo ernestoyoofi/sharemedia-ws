@@ -1,0 +1,80 @@
+/* ==== [ ALERT BOX CLIENT ] ==== */
+@keyframes AlertDialogFrame {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+@keyframes AlertDialogFrameBox {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes AlertDialogFrameBoxOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.app--alert-box {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 12px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: AlertDialogFrameBox 0.3s;
+}
+.app--alert-box .app--alert-lookui {
+  max-width: 420px;
+  background-color: #f0e4ff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 7px;
+  animation: AlertDialogFrame 0.3s forwards;
+  animation-delay: 0.05s;
+  transform: scale(0);
+}
+.app--alert-box[removecontent] {
+  animation: AlertDialogFrameBoxOut 0.3s;
+}
+.app--alert-box .app--alert-lookui .app--alert-texttitle {
+  font-size: 19px;
+  font-weight: 500;
+  user-select: none;
+}
+.app--alert-box .app--alert-lookui .app--alert-textbox {
+  scrollbar-width: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-weight: 300;
+  max-height: 500px;
+  margin: 20px 0px;
+}
+.app--alert-box .app--alert-lookui .app--alert-textbox p {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+.app--alert-box .app--alert-lookui .app--alert-textbox::-webkit-scrollbar {
+  width: 0px;
+}
+.app--alert-box .app--alert-lookui .app--alert-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -4px;
+}
+.app--alert-box .app--alert-lookui .app--alert-btn button {
+  border: none; outline: none;
+  background-color: transparent;
+  font-weight: 700;
+  padding: 9px 16px;
+  color: #69087c;
+  border-radius: 20px;
+  margin-left: 4px;
+  transition: .3s;
+  user-select: none;
+  background-color: #e4a7f0;
+}
+.app--alert-box .app--alert-lookui .app--alert-btn button:hover {
+  background-color: #f5c0ff;
+}

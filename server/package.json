@@ -1,0 +1,18 @@
+{
+  "name": "sharemedia-ws.server",
+  "version": "1.5.0",
+  "description": "Server As Only WebSocket Managements",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodemon index.js --developments"
+  },
+  "author": "",
+  "license": "MIT"
+}

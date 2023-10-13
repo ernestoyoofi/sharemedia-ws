@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share Media With WebSocket</title>
+  <link rel="stylesheet" href="./global.css" />
+  <link rel="stylesheet" href="./dialog.comp.css" />
+</head>
+<body hasjoin="0">
+  <main class="response">
+    <div class="tab-btn-switch">
+      <span class="btn-content"></span>
+      <button btn-function="pairing-code" selectbtn="1">Pairing Code</button>
+      <button btn-function="enter-code">Enter Code</button>
+    </div>
+    <div class="main-content-code">
+      <div class="main-slide" slide-page="pairing-code">
+        <div class="box-main">
+          <p>This is your pairing code, to share please ask someone or another device to fill in this code, but only one device can share after this session is entered</p>
+          <center>
+            <h2 id="codepairing">---------</h2>
+            <small id="usercode" style="font-style: italic; color: #8d8d8d;"></small>
+          </center>
+        </div>
+      </div>
+      <div class="main-slide" slide-page="enter-code">
+        <div class="box-main">
+          <p>Enter the pairing code of the other device to which this file was sent</p>
+          <label class="inputcode">
+            <span>Input Code</span>
+            <input type="text" placeholder="" id="input-code-pairing"/>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="fileshareing">
+      <div class="box-view" hasbucket="1">
+        <p>Download File</p>
+      </div>
+      <div class="box-view" hasbucket="0">
+        <p>Send File</p>
+        <blockquote></blockquote>
+        <input type="file" id="sendfile" />
+        <small id="sendfile-status">Status: 20%</small>
+      </div>
+    </div>
+  </main>
+  <script src="./dialog.comp.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
